@@ -1,13 +1,15 @@
 import './App.css';
 import { useState } from 'react';
-import Button from './components/button';
+
+import HookButton from './components/button.hook';
+import ClassButton from './components/button.class';
 
 function App() {
   let [nome, setNome] = useState('Gabriel');
   
   window.setTimeout(() => {
     setNome("Gabriel Ramos")
-  }, 1000);
+  }, 2000);
 
   const onClickButton = (valor) => {
     console.log('valor atual é ', valor);
@@ -15,9 +17,12 @@ function App() {
 
   return (
     <div className="App">
-      <Button type="Ronaldo" text="Pinto" nome={nome} onUpdate={onClickButton}>
-        clica ai por props
-      </Button>
+      <HookButton type="Ronaldo" text="Pinto" nome={nome} onUpdate={onClickButton}>
+        [botao com hook] texto passado via children
+      </HookButton>
+      <ClassButton onUpdate={onClickButton}>
+        [botao com class] texto passado via children
+      </ClassButton>
     </div>
   );
 }
