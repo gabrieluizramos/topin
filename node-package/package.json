@@ -1,0 +1,14 @@
+{
+  "name": "node-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'vai testar'",
+    "start": "echo 'eae'",
+    "start:dev": "echo 'iniciando desenvolvimento'"
+  },
+  "keywords": [],
+  "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com> (https://gabrieluizramos.com.br)",
+  "license": "ISC"
+}
